@@ -37,7 +37,7 @@ def _clone(message, bot):
         if reply_to is not None:
             reply_to.delete()
 
-    if BOT_PM and message.chat.type != 'private':
+    if BOT_PM:
         try:
             msg1 = f'Added your Requested link to Download\n'
             send = bot.sendMessage(message.from_user.id, text=msg1)
